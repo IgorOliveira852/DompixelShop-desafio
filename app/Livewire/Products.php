@@ -33,15 +33,21 @@ class Products extends Component
         $validatedDate = $this->validate([
             'name' => [
                 'required',
+                'string'
             ],
             'description' => [
-                'required'
+                'sometimes',
+                'string',
+                'nullable'
             ],
             'price' => [
                 'required',
+                'numeric',
+                "between:0.00,9999999.99"
             ],
             'amount' => [
                 'required',
+                'integer'
             ],
         ]);
 
@@ -95,6 +101,8 @@ class Products extends Component
             'price' => 'required',
             'amount' => 'required',
         ]);
+
+        $validatedDate['price'] = str_replace(',', '.', $validatedDate['price']);
 
         $product = Product::find($this->product_id);
         $product->update([
