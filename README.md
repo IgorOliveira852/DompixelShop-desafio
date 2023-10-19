@@ -9,7 +9,8 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 ### 📋 Pré-requisitos
 
 ```
-Somente o docker
+Docker Desktop - Windows
+Docker - Ubuntu
 ```
 
 ### 🔧 Instalação
@@ -20,6 +21,7 @@ Uma série de exemplos passo-a-passo que informam o que você deve executar para
 ./vendor/bin/sail composer update && composer install
 ./vendor/bin/sail up -d
 ./vendor/bin/sail artisan migrate
+./vendor/bin/sail artisan db:seed --class=ProductsTableSeeder
 ```
 
 
