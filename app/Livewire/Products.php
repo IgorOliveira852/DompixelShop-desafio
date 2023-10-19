@@ -120,4 +120,16 @@ class Products extends Component
         Product::find($id)->delete();
         session()->flash('message', 'Product Deleted Successfully.');
     }
+
+    public function incrementAmount()
+    {
+        $this->amount++;
+    }
+
+    public function decrementAmount()
+    {
+        if ($this->amount > 0) {
+            $this->amount--;
+        }
+    }
 }

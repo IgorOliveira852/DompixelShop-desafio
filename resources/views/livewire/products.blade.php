@@ -29,7 +29,7 @@
                 <td>{{ $product->id }}</td>
                 <td>{{ $product->name }}</td>
                 <td>{{ $product->description }}</td>
-                <td>{{ $product->price }}</td>
+                <td>R${{ $product->price }}</td>
                 <td>{{ $product->amount }}</td>
                 <td>
                     <button wire:click="edit({{ $product->id }})" class="btn btn-primary btn-sm">Edit</button>
