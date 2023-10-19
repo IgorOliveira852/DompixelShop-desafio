@@ -96,8 +96,8 @@ class Products extends Component
             'amount' => 'required',
         ]);
 
-        $post = Product::find($this->product_id);
-        $post->update([
+        $product = Product::find($this->product_id);
+        $product->update([
             'name' => $this->name,
             'description' => $this->description,
             'price' => $this->price,
